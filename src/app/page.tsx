@@ -1,8 +1,17 @@
+import Card, { CardProps } from '@/components/Card'
+import Header from '@/components/Header'
+import data from '../data.json'
+
 const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      Hello World
-    </main>
+    <>
+      <Header />
+      <main className="flex flex-col items-center justify-center gap-14 p-12">
+        {data.map((values) => (
+          <Card key={values.id} {...values} />
+        ))}
+      </main>
+    </>
   )
 }
 
