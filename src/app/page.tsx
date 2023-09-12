@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-center gap-14 p-12">
+      <main className="flex flex-col items-center justify-center gap-14 p-12 md:gap-6">
         {data.map((values) => (
           <Card key={values.id} {...values} />
         ))}

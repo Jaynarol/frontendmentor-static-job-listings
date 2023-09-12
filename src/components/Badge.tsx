@@ -13,7 +13,7 @@ const Badge: FC<BadgeProps & PropsWithChildren> = ({ type, children }) => {
   }
 
   return (
-    <span className={`${className[type]} mx-1 px-2 py-1 font-bold`}>
+    <span className={`${className[type]} px-2 pt-1 font-bold`}>
       {type === 'new' && 'NEW!'}
       {type === 'featured' && 'FEATURED'}
       {children}
