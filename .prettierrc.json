@@ -1,0 +1,8 @@
+{
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "parser": "typescript",
+  "semi": false,
+  "singleQuote": true,
+  "jsxSingleQuote": false,
+  "singleAttributePerLine": false
+}
