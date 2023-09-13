@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import Badge from '@/components/Badge'
-import Tag from '@/components/Tags'
 
 export type CardProps = {
   id: number
@@ -16,6 +15,17 @@ export type CardProps = {
   location: string
   languages: Array<string>
   tools: Array<string>
+  addTagToFilter: (tag: string) => void
+}
+
+type CompanyTags = Pick<CardProps, 'role' | 'level' | 'languages' | 'tools'>
+export const getCompanyTag = ({
+  role,
+  level,
+  languages,
+  tools,
+}: CompanyTags) => {
+  return [role, level, ...languages, ...tools]
 }
 
 const Card: FC<CardProps> = (props) => {
@@ -28,13 +38,9 @@ const Card: FC<CardProps> = (props) => {
     postedAt,
     contract,
     location,
-    role,
-    level,
-    languages,
-    tools,
+    addTagToFilter,
   } = props
 
-  const tags = [role, level, ...languages, ...tools]
   const featuredBorderClass = isFeatured
     ? 'border-l-[6px] border-primary md:border-l-[4px]'
     : ''
@@ -76,8 +82,14 @@ const Card: FC<CardProps> = (props) => {
       </div>
 
       <div className="flex flex-wrap gap-2 md:flex-1 md:justify-end md:self-center">
-        {tags.map((text) => (
-          <Tag key={text} text={text} />
+        {getCompanyTag(props).map((tag) => (
+          <button
+            key={tag}
+            onClick={() => addTagToFilter(tag)}
+            className="rounded-l-md rounded-r-md bg-secondary-light px-2 pt-1 text-lg font-bold text-primary duration-200 hover:bg-primary hover:text-secondary-light"
+          >
+            {tag}
+          </button>
         ))}
       </div>
     </div>

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="relative bottom-5 pt-20 text-center">
+    <footer className="relative bottom-5 pt-5 text-center">
       Challenge by{' '}
       <a
         className="text-violet-400"
