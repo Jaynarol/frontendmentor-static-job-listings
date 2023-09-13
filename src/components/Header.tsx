@@ -4,12 +4,12 @@ const Header = () => (
       <img
         src="./images/bg-header-mobile.svg"
         alt="background"
-        className="w-full md:hidden"
+        className="h-fit w-full md:hidden"
       />
       <img
         src="./images/bg-header-desktop.svg"
         alt="background"
-        className="md:show w-full"
+        className="hidden w-full md:block"
       />
     </picture>
   </header>
