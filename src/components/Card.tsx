@@ -47,14 +47,14 @@ const Card: FC<CardProps> = (props) => {
 
   return (
     <div
-      className={`${featuredBorderClass} flex w-full min-w-[300px] max-w-6xl flex-col rounded-md bg-white p-7 shadow-lg md:flex-row md:justify-between`}
+      className={`${featuredBorderClass} flex w-full min-w-[300px] max-w-6xl flex-col gap-4 rounded-md bg-white p-7 shadow-lg md:flex-row md:justify-between`}
     >
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:min-w-[400px] md:flex-row">
         <picture className="md:flex-none">
           <img
             src={logo}
             alt={`${company} logo`}
-            className="-mt-14 h-14 rounded-full md:mt-auto md:h-full md:w-full md:p-1"
+            className="-mt-14 h-14 rounded-full md:mt-auto md:h-28 md:p-1"
           />
         </picture>
 
@@ -67,10 +67,10 @@ const Card: FC<CardProps> = (props) => {
             {isFeatured && <Badge type="featured" />}
           </div>
 
-          <h2 className="text-lg font-bold duration-100 hover:cursor-pointer hover:text-primary">
+          <h2 className="text-lg font-bold duration-100 hover:cursor-pointer hover:text-primary md:text-2xl">
             {position}
           </h2>
-          <p className="text-primary">
+          <p className="text-primary md:text-lg">
             {postedAt}
             &nbsp;&nbsp;•&nbsp;&nbsp;
             {contract}

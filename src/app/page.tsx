@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <main className="flex flex-col items-center justify-center gap-14 px-10 py-16 md:gap-6">
+      <main className="flex flex-col items-center justify-center gap-14 px-10 py-24 md:gap-6">
         <FilterPanel
           tags={tagsFilter}
           removeTagFromFilter={removeTagFromFilter}

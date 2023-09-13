@@ -16,7 +16,7 @@ const FilterPanel: FC<Props> = ({
   }
 
   return (
-    <div className="mb-3 mt-[-6.3rem] flex w-full min-w-[300px] max-w-6xl justify-between gap-5 rounded-md bg-white px-8 py-5 shadow-lg transition duration-100 ease-in-out">
+    <div className="mb-3 mt-[-8.2rem] flex w-full min-w-[300px] max-w-6xl justify-between gap-5 rounded-md bg-white px-8 py-5 shadow-lg transition duration-100 ease-in-out">
       <div className="flex flex-wrap gap-3">
         {tags.map((tag) => (
           <div key={tag} className="flex">
